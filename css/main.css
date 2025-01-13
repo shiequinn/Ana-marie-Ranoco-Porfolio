@@ -15,6 +15,9 @@
     display: flex;
     align-items: center;
     justify-content:center;
+    overflow: hidden;
+  
+
 
 }
 nav{
@@ -46,16 +49,7 @@ nav ul li a{
     font-size: 20px;
 
 }
-nav ul li a:hover{
-    color:#f1ecec;
-    border-bottom: 2px solid #fff;
-    
 
-}
-nav ul li a.active{
-    color:#fff;
-    border-bottom: 2px solid #fff;
-}
 
 .sidebar{
     position: fixed;
@@ -148,7 +142,7 @@ nav ul li a.active{
 .portfolio{
     width: 100%;
     padding: 50px 5%;
-    background-color:#000;
+    background-color:#313131;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -185,7 +179,6 @@ nav ul li a.active{
     overflow: hidden;
     position:relative;
     border-radius: 20px;
-    
     padding:10px;
     display: flex;
     flex-wrap:wrap;
@@ -218,21 +211,27 @@ nav ul li a.active{
     background-color: #fff;
     color:#000;
 }
+
 .about{
     width: 100%;
     padding: 50px 5%;
-    background-color:#000;
+    background-color:#313131;
     display: flex;
     flex-direction:column;
     align-items: center;
     justify-content: center;
+    position:relative;
+    border-style: double;
+    border-color: #fff;
+
+    
 }
 .about h2{
     font-size: 40px;
     color:#fff;
     font-weight: 600;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 .about h3{
     font-size: 20px;
@@ -240,6 +239,7 @@ nav ul li a.active{
     text-align: center;
     margin-bottom: 20px;
     font-weight: 600;
+
 }
 .about p{
     font-size: 16px;
@@ -254,21 +254,32 @@ nav ul li a.active{
     justify-content: center;
     align-items: center;
     flex-direction:row;
+    position: relative;
+   
 }
 .about .about-container .about-item{
-    width: 48%;
+    width:300px;
+    height: 500px;
     margin: 10px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
+    border-radius: 20px;
+    border-style: double;
+    border-color: #fff;
+    position:relative;
+
 }
 .about .about-container .about-item img{
-    width: 250px;
+    width: 100%;
     height: 250px;
-    border-radius: 20%;
     overflow: hidden;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
+
 .footer{
     width: 100%;
     height: 200px;
@@ -277,8 +288,9 @@ nav ul li a.active{
     display: flex;
     align-items: center;
     justify-content:center;
-    border-style: double;
-    border-color: aliceblue;
+   border-style: double;
+    border-color: #fff;
+
   
 }
 .footer h2{
@@ -353,46 +365,22 @@ nav ul li a.active{
 
 @media(min-aspect-ratio: 16/9)   {
     .back-video{
-        width:100%
-        ;height: auto;
+        width:100%;
+        height: auto;
+        margin:-20px;
     }
 }
 @media(max-aspect-ratio: 16/9) {
     .back-video{
         width:auto;
-        height: 100%;
+        height:100%;
+        margin:-20px;
     }
 }
-@media(max-width: 400px){
-    .sidebar{
-        width:100%;
-        display:none;
-    }
-}
-
-@media(max-width: 800px){
-    .hideOnMobile{
-       display:none;
-   }
-   .menu-button{
-       display:block;
-   }
-   }
-   
-   @media(max-width:800px){
-    .content{
-        padding:0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content:center;
-
-        
-    }
-   }
-    @media(max-width: 800px){
+    @media(max-width:480px){
      .sidebar{
           display:flex;
+        
      }
      .sidebar li{
           margin: 20px 0;
@@ -400,42 +388,12 @@ nav ul li a.active{
      .sidebar a{
           font-size: 20px;
      }
-     .content{
-          margin-top: 100px;
-     }
-     .content h1{
-          font-size: 30px;
-     }
-     .content a{
-          font-size: 16px;
-     }
-     .content p{
-          font-size: 16px;
-     }
-     .content .profile{
-          width: 100px;
-          height: 100px;
-     }
-     
-     .menu-button i{
-          font-size: 30px;
-          color: #000;
-     }
-     .menu-button.active{
-          background-color: #000;
-     }
-     .menu-button.active i{
-          color: #fff;
-     }
      .sidebar{
           transform: translateX(0);
      }
      .sidebar.active{
           transform: translateX(0);
-     }
-     .content{
-          margin-top: 200px;
-     }
+     } 
      .content h1{
           font-size: 30px;
      }
@@ -452,16 +410,11 @@ nav ul li a.active{
      .menu-button{
           display:block;
           position: absolute;
-          top: 20px;
-          right: 20px;
+          top:20px;
+          right:0;
           width: 50px;
           height: 50px;
-          background-color: #fff;
-          border-radius: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          cursor: pointer;
+          
      }
      .menu-button i{
           font-size: 30px;
@@ -473,6 +426,55 @@ nav ul li a.active{
      .menu-button.active i{
         color:#fff;
      }
+     
+     nav{
+        width: 100%;
+        position:absolute;
+        padding:0;
+      
     }
-  
+    .homepage{
+    width:100%;
+    height: 100vh;
+    background-color: #000;
 
+        
+}
+ .homepage .logo{
+    width: 50px; 
+    height: 50px;
+    position:absolute;
+    top:20px;
+    left:0;
+    background-color: transparent;
+
+  }
+ .sidebar{
+    width:100%;
+    display:none;
+}
+.homepage .hideOnMobile{
+    display:none;
+}
+
+footer{
+    bottom:0;
+    font-size: 12px;
+}
+.content{
+    width:100%;
+ 
+}
+
+}
+@media(max-width: 800px){
+.homepage .navbar{
+    width:100%;
+    
+
+}
+
+
+}
+
+    
